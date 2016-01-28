@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>WebSocket Client</title>
+    <script type="text/javascript">
+        var ws = new WebSocket("ws://localhost:8080/ws");
+        function writeMessage() {
+            ws.send(document.getElementById("message").value);
+        }
+    </script>
+</head>
+<body>
+    <textarea id="message" rows="10" cols="10">
+    </textarea>
+
+    <button onclick="writeMessage()" value="Send" />
+
+</body>
+</html>

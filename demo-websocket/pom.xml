@@ -10,20 +10,18 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>swarm-demo-jaxrs</artifactId>
+    <artifactId>swarm-demo-websockets</artifactId>
+    <packaging>war</packaging>
 
     <dependencies>
         <dependency>
             <groupId>org.wildfly.swarm</groupId>
-            <artifactId>jaxrs</artifactId>
+            <artifactId>undertow</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.wildfly.swarm</groupId>
-            <artifactId>swagger</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.wildfly.swarm</groupId>
-            <artifactId>weld</artifactId>
+            <groupId>com.jamesnetherton</groupId>
+            <artifactId>lolcat4j</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
@@ -32,9 +30,6 @@
             <plugin>
                 <groupId>org.wildfly.swarm</groupId>
                 <artifactId>wildfly-swarm-plugin</artifactId>
-                <configuration>
-                    <mainClass>com.jamesnetherton.Main</mainClass>
-                </configuration>
             </plugin>
         </plugins>
     </build>

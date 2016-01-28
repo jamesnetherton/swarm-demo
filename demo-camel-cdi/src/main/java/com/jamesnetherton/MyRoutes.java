@@ -11,19 +11,12 @@ import org.apache.camel.cdi.Uri;
 public class MyRoutes extends RouteBuilder {
 
     @Inject
-    @Uri("timer:foo?period=5000")
+    @Uri("file:/home/james/Documents/art?delay=3000&noop=true&idempotent=false")
     private Endpoint inputEndpoint;
-
-    @Inject
-    @Uri("log:output")
-    private Endpoint resultEndpoint;
 
     @Override
     public void configure() throws Exception {
-        // you can configure the route rule with Java DSL here
-        from(inputEndpoint)
-            .to("bean:counterBean")
-            .to(resultEndpoint);
+        from(inputEndpoint).to("bean:rainbowBean");
     }
 
 }
