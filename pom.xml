@@ -17,10 +17,10 @@
     </properties>
 
     <modules>
-        <module>camel-cdi</module>
-        <module>jaxrs</module>
-        <module>ssl</module>
-        <module>websockets</module>
+        <module>demo-camel-cdi</module>
+        <module>demo-jaxrs</module>
+        <module>demo-ssl</module>
+        <module>demo-websocket</module>
     </modules>
 
     <dependencyManagement>
