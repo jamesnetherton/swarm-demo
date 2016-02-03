@@ -8,9 +8,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript">
-        function playSound(sound) {
-            $("#audio").attr("src", "/rest/music/" + sound)
-            $("#audio").trigger('play');
+        function playMovie(movie) {
+            $("#video").attr("src", "/rest/movie/" + movie);
+            $("#video").trigger('play');
         }
     </script>
 </head>
@@ -19,17 +19,11 @@
     <h1>WildFly Swarm JAX-RS demo</h1>
     <form>
         <div class="form-group">
-            <button type="button" class="btn btn-primary">Play track 1</button>
-        </div>
-        <div class="form-group">
-            <button class="btn btn-primary" onclick="playSound('barcelona')">Play track 2</button>
-        </div>
-        <div class="form-group">
-            <button class="btn btn-primary" onclick="playSound('barcelona')">Play track sequence</button>
+            <button class="btn btn-primary" type="button" onclick="playMovie('barcelona')">Play movie</button>
         </div>
     </form>
+    <video id="video" width="500" height="500" controls/>
 </div>
-<audio id="audio"/>
 </body>
 </html>
 

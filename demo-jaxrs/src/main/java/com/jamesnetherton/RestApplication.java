@@ -12,7 +12,7 @@ public class RestApplication extends Application {
     @Override
     public Set<Class<?>> getClasses() {
         Set<Class<?>> classes = new HashSet<>();
-        classes.add(AudioService.class);
+        classes.add(MovieService.class);
         return classes;
     }
 }

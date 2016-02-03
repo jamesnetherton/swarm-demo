@@ -10,18 +10,18 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>swarm-demo-websockets</artifactId>
-    <packaging>war</packaging>
+    <artifactId>swarm-demo-camel-subsystem</artifactId>
 
     <dependencies>
         <dependency>
             <groupId>org.wildfly.swarm</groupId>
-            <artifactId>undertow</artifactId>
+            <artifactId>camel</artifactId>
+            <version>1.0.0.Alpha7-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>com.jamesnetherton</groupId>
-            <artifactId>lolcat4j</artifactId>
-            <version>0.1.0</version>
+            <groupId>org.wildfly.swarm</groupId>
+            <artifactId>undertow</artifactId>
+            <version>1.0.0.Alpha7-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
@@ -30,6 +30,11 @@
             <plugin>
                 <groupId>org.wildfly.swarm</groupId>
                 <artifactId>wildfly-swarm-plugin</artifactId>
+                <configuration>
+                    <properties>
+                        <java.net.preferIPv4Stack>true</java.net.preferIPv4Stack>
+                    </properties>
+                </configuration>
             </plugin>
         </plugins>
     </build>
