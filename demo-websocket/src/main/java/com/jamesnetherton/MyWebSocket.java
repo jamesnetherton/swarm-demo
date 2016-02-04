@@ -4,7 +4,7 @@ import javax.websocket.OnMessage;
 import javax.websocket.Session;
 import javax.websocket.server.ServerEndpoint;
 
-import com.jamesnetherton.lolcat4j.Lol;
+import com.github.jamesnetherton.lolcat4j.Lol;
 
 @ServerEndpoint("/ws")
 public class MyWebSocket {
